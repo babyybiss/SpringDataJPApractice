@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            color: deeppink;
+            background-color: bisque;
+            text-align: center;
+        }
+
+        button {
+            background-color: pink;
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+  <h1>아티스트 삭제</h1>
+<form action="/artist/delete" method="post">
+  <label>삭제할 아티스트 번호 : </label><input type="number" name="artistNo"><br>
+  <input type="submit" name="deleteSubmit">
+</form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    body {
+      color: deeppink;
+      background-color: bisque;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 50px;
+    }
+
+    button {
+      background-color: pink;
+      color: deeppink;
+    }
+
+    table,th,td {
+      border: solid pink;
+    }
+  </style>
+</head>
+<body>
+  <h1>장르별로 해당 아티스트 목록 조회</h1>
+
+<form action="/artist/searchGenre" method="post">
+  <label>
+    <select id="mySelect" name="selectedGenre">
+      <option value="Pop">Pop</option>
+      <option value="HipHop">HipHop</option>
+      <option value="Rock">Rock</option>
+      <option value="RnB">RnB</option>
+      <option value="Electronic">Electronic</option>
+      <option value="Country">Country</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+  <input type="submit" name="genreSubmit"/>
+</form>
+</body>
+</html>

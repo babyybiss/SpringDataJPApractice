@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            color: deeppink;
+            background-color: bisque;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 50px;
+        }
+
+        button {
+            background-color: pink;
+            color: deeppink;
+        }
+
+        table,th,td {
+            border: solid pink;
+        }
+
+    </style>
+</head>
+<body>
+<h1>아티스트 정보</h1>
+<table>
+    <tr>
+        <th>코드 번호</th>
+        <th>이름</th>
+        <th>데뷔 일자</th>
+        <th>앨범 수</th>
+        <th>장르</th>
+        <th>레이블 코드</th>
+        <th>국적</th>
+    </tr>
+    <tr>
+        <td th:text="${ artistDTO.artistNo }"></td>
+        <td th:text="${ artistDTO.name}"></td>
+        <td th:text="${ artistDTO.debutDate }"></td>
+        <td th:text="${ artistDTO.totalAlbums }"></td>
+        <td th:text="${ artistDTO.genre }"></td>
+        <td th:text="${ artistDTO.labelCode }"></td>
+        <td th:text="${ artistDTO.nationality }"></td>
+    </tr>
+</table>
+</body>
+</html>

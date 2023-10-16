@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>findByArtistCode</title>
+    <style>
+        body {
+            color: deeppink;
+            background-color: bisque;
+            text-align: center;
+        }
+
+        button {
+            background-color: pink;
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+<h1>찾고자하는 아티스트의 코드를 입력해주세요</h1>
+
+<form id="artistForm" action="/artist/{artistNo}" method="get">
+    <label>아티스트 코드: <input type="number" id="artistNo" name="artistNo"></label>
+    &emsp;<input type="submit" name="submitArtistSearchCode">
+</form>
+
+<script>
+    document.getElementById("artistForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting as usual
+
+        const artistNoInput = document.getElementById("artistNo");
+        const artistNoValue = artistNoInput.value;
+
+        // Construct the URL with the path variable value
+        const url = `/artist/${artistNoValue}`;
+
+        // Redirect to the URL
+        window.location.href = url;
+    });
+</script>
+</body>
+</html>

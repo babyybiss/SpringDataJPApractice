@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artists</title>
+    <style>
+        body {
+            color: deeppink;
+            background-color: bisque;
+            text-align: center;
+        }
+
+        button {
+            background-color: pink;
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+
+  <h1>💗Welcome to the Artist's View Page💗</h1>
+
+  <button onclick="location.href='/artist/inputCode'">특정 아티스트 목록 보기</button>
+  <button onclick="location.href='/artist/list'">전체 아티스트 목록 보기</button>
+
+  <!--Query method select-->
+  <button onclick="location.href='/artist/queryMethod'">쿼리 메소드 테스트</button>
+
+  <!--jpql group function select-->
+  <button onclick="location.href='/artist/jqlGroupFunction'">그룹 함수 테스트</button>
+
+  <button onclick="location.href='/artist/registArtist'">아티스트 등록하기</button>
+
+  <!--세터 대신 빌더 사용-->
+  <button onclick="location.href='/artist/modifyArtist'">아티스트 수정하기</button>
+
+  <button onclick="location.href='/artist/delete'">아티스트 삭제하기</button>
+</body>
+</html>

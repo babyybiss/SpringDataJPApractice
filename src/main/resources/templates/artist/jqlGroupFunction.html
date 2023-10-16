@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            color: deeppink;
+            background-color: bisque;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>레이블별로 보유 아티스트 합계 조회</h1>
+
+<form action="/artist/searchByLabel" method="post">
+    <label>
+        <select id="mySelect" name="labelCode">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </label>
+    <input type="submit" name="labelSubmit"/>
+</form>
+</body>
+</body>
+</html>

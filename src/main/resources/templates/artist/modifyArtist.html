@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+
+            color: deeppink;
+            background-color: bisque;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>아티스트 정보 수정 페이지</h1>
+
+<form action="/artist/modifyArtist" method="post">]
+    <label>수정할 아티스트 번호 : </label><input type="number" name="artistNo"><br>
+    <label>수정할 아티스트 이름 : </label><input type="text" name="name"><br>
+    <input type="submit" name="modifySubmit">
+</form>
+</body>
+</html>

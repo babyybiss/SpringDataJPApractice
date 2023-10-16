@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+
+            color: deeppink;
+            background-color: bisque;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>신인 아티스트 등록 ~🎉</h1>
+
+<form action="/artist/registArtist" method="POST">
+    <label>아티스트 이름 : </label><input type="text" name="name"><br>
+    <label>데뷔 날짜 : </label><input type="date" name="debutDate"><br>
+    <label>총 앨범 수 : </label><input type="number" name="totalAlbums"><br>
+    <label>장르 : </label>
+    <select id="mySelect" name="genre">
+        <option value="Pop">Pop</option>
+        <option value="HipHop">HipHop</option>
+        <option value="Rock">Rock</option>
+        <option value="RnB">RnB</option>
+        <option value="Electronic">Electronic</option>
+        <option value="Country">Country</option>
+        <option value="Other">Other</option>
+    </select><br>
+    <label>레이블 코드 : </label>
+    <select id="labelCode" name="labelCode">
+    </select><br>
+    <label>국적 : </label><input type="text" name="nationality">
+    <input type="submit" name="registSubmit">
+</form>
+
+<!--fetch 를 이용해서 레이블 코드를 value로 설정하고 각 option element의 textContent를 가져온 labelName으로 설정 하는 script-->
+<script>
+    fetch('/artist/label')
+    .then(res => res.json())
+    .then(data => {
+        const $labelCode = document.getElementById("labelCode");
+
+        for(let index in data) {
+            const $option = document.createElement('option');
+            $option.value = data[index].labelCode;
+            $option.textContent = data[index].labelName;
+
+            $labelCode.appendChild($option)
+        }
+    })
+</script>
+
+</body>
+</html>

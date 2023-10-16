@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            color: deeppink;
+            background-color: bisque;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+<h1>[[${ labelCode }]]번 코드 레이블의 보유 아티스트 수</h1>
+<h2><span th:text="${ sumByLabel }"></span>명 입니다</h2>
+
+</body>
+</html>
